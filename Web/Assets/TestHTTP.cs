@@ -15,7 +15,7 @@ public class TestHTTP : MonoBehaviour
     }
 
     IEnumerator SendHTTP() {
-        UnityWebRequest www = UnityWebRequest.Get("http://localhost:10000/hello/sdfa/123");
+        UnityWebRequest www = UnityWebRequest.Get("http://localhost:10000/json/sdfa/123");
         yield return www.SendWebRequest();
         string hi = www.downloadHandler.text;
         text.text = hi;
